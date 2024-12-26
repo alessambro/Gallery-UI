@@ -1,0 +1,110 @@
+:root {
+    --outline-marker: 1px solid red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    row-gap: 5px;
+    column-gap: 5px;
+    background-color: black;
+    opacity: 1;
+}
+
+.images {
+    flex: 1 1 40%;
+    box-sizing: border-box;
+    background-size: cover;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.images:nth-child(1) {
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 10px;
+}
+
+.images:nth-child(2) {
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 10px;
+}
+
+.images:nth-child(3) {
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 10px;
+}
+
+.images:nth-child(4) {
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: 10px;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+.images:hover {
+    transform: scale(1.1);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.ione:hover~.itwo {
+    transform: translateX(11.5px);
+}
+
+.ione:hover~.ithree {
+    transform: translateY(11.5px);
+}
+
+.ione:hover~.ifour {
+    transform: translate(11.5px, 11.5px);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+.itwo:hover~.ithree {
+    transform: translate(-11.5px, 11.5px);
+}
+
+.itwo:hover~.ifour {
+    transform: translateY(11.5px);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.ithree:hover~.ifour {
+    transform: translateX(11.5px);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+.images:nth-child(1) {
+    background-image: url("../../assets/one.jpg");
+}
+
+.images:nth-child(2) {
+    background-image: url("../../assets/two.jpg");
+}
+
+.images:nth-child(3) {
+    background-image: url("../../assets/three.jpg");
+}
+
+.images:nth-child(4) {
+    background-image: url("../../assets/four.jpg");
+}
