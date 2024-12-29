@@ -17,7 +17,6 @@ body {
 }
 
 .container {
-    border: 1px solid;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -26,8 +25,9 @@ body {
     border-radius: 50%;
     row-gap: 5px;
     column-gap: 5px;
-    background-color: black;
+    background-color: transparent;
     opacity: 1;
+    position: relative;
 }
 
 .images {
@@ -39,23 +39,19 @@ body {
 }
 
 .images:nth-child(1) {
-    border-top-left-radius: 100%;
-    border-bottom-right-radius: 10px;
+    border-radius: 100% 10px 10px 10px;
 }
 
 .images:nth-child(2) {
-    border-top-right-radius: 100%;
-    border-bottom-left-radius: 10px;
+    border-radius: 10px 100% 10px 10px;
 }
 
 .images:nth-child(3) {
-    border-bottom-left-radius: 100%;
-    border-top-right-radius: 10px;
+    border-radius: 10px 10px 10px 100%;
 }
 
 .images:nth-child(4) {
-    border-bottom-right-radius: 100%;
-    border-top-left-radius: 10px;
+    border-radius: 10px 10px 100% 10px;
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -94,17 +90,57 @@ body {
 
 /* --------------------------------------------------------------------------------------------- */
 .images:nth-child(1) {
-    background-image: url("../../assets/one.jpg");
+    background-image: url("../../assets/one.avif");
 }
 
 .images:nth-child(2) {
-    background-image: url("../../assets/two.jpg");
+    background-image: url("../../assets/two.avif");
 }
 
 .images:nth-child(3) {
-    background-image: url("../../assets/three.jpg");
+    background-image: url("../../assets/three.avif");
 }
 
 .images:nth-child(4) {
-    background-image: url("../../assets/four.jpg");
+    background-image: url("../../assets/four.avif");
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+.ifive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: cover;
+    background-color: red;
+    display: none;
+    transition: ease-in-out 5s;
+    cursor: pointer;
+    animation: animate 3s;
+}
+
+.ione .itwo .ithree .ifour {
+    display: block;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }
