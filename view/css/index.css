@@ -118,9 +118,13 @@ body {
     background-size: cover;
     background-color: red;
     display: none;
-    transition: ease-in-out 5s;
+    transition: ease-in-out 0.5s;
     cursor: pointer;
-    animation: animate 3s;
+    animation: animate 2s;
+}
+
+.ifive:hover {
+    transform: scale(1.1);
 }
 
 .ione .itwo .ithree .ifour {

@@ -66,7 +66,7 @@ const myFunc = () => {
             iTwo.classList.add("show");
             iThree.classList.add("show");
             iFour.classList.add("show");
-        }, 100);
+        }, 0);
     } else {
         iFive.classList.remove("hide");
         iOne.classList.remove("show");
@@ -79,7 +79,7 @@ const myFunc = () => {
             iTwo.classList.add("hide");
             iThree.classList.add("hide");
             iFour.classList.add("hide");
-        }, 100);
+        }, 0);
     }
 }
 
@@ -104,4 +104,5 @@ const threeTransform = () => {
 const fourTransform = () => {
     iFive.style.backgroundImage = "url('../../assets/four.avif')";
     myFunc()
-}   
+}
+
