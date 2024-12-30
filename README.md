@@ -1,9 +1,3 @@
-<style>
-  div {
-    display: flex;
-    flex-direction: row;
-  }
-</style>
 <h1> For practice only</h1>
 <div><p>you can access it by clicking this link</p><a href="https://alzzndro.github.io/Gallery-UI/view/pages/index.html" target="_blank">Link</a></div>
 <br>
